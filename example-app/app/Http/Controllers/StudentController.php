@@ -46,10 +46,8 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id){
         $student = DB::table('Student')->find($id);
-
         return response()->json([
             'student'=>$student
         ]);
